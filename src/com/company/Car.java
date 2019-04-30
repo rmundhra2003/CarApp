@@ -13,19 +13,13 @@ public class Car {
 
     }
     //Overloaded constructor
-    public Car(String c,
-                    String m,
-                    String s,
-                    String status,
-                    String r,
-                    String op)
+    public Car(String c, String m)
     {
             this.colour = c;
-            this.make = m;
-            this.speed = s;
-            this.status = status;
-            this.stoppedReason = r;
-            this.op = op;
+            this.make = m; this.speed = "";
+            this.status = "";
+            this.stoppedReason = "";
+            this.op = "";
     }
 
     //Getters and setters for class variables
@@ -68,6 +62,10 @@ public class Car {
     public void operateCar(String opCode) {
 
         System.out.println("The " +this.colour +" " + this.make +" " +"is " + opCode);
+    }
+    public String getDescription() {
+        String s = "The car is " +this.getColour() +" " +this.getMake();
+        return s;
     }
 
 
